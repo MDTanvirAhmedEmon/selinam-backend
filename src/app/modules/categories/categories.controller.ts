@@ -23,7 +23,6 @@ const getAllCategory = async (req: Request, res: Response, next: NextFunction) =
     try {
 
         const query = req.query
-        console.log('my query', query);
         const result = await categoryServices.getAllCategory(query)
 
         res.status(200).json({

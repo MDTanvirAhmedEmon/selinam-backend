@@ -25,7 +25,6 @@ const createCategory = async (data: Partial<ICategory>, file: any): Promise<ICat
 
 const getAllCategory = async (query: any): Promise<ICategory[]> => {
     const filter = query ? query : {}
-    console.log('filter', filter);
     const result = await Category.find(filter);
     return result;
 }

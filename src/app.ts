@@ -8,6 +8,7 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import initialChats from './app/modules/chats/chats.socket';
 import path from 'path';
+import { logger } from './app/helpers/logger';
 const app: Application = express()
 
 
@@ -21,6 +22,7 @@ app.use(express.json())
 app.use(cors())
 app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+app.use(logger);
 app.use('/api/v1', router)
 
 app.use(globalErrorHandler)
