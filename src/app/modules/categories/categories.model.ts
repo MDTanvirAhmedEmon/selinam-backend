@@ -5,7 +5,7 @@ const categoriesSchema = new Schema<ICategory>(
     {
         name: { type: String, required: true },
         type: { type: String, enum: ['income', 'expenses'], },
-        userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+        // userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
         categoryImage: { type: String },
     },
     { timestamps: true }
