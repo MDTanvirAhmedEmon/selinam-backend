@@ -4,6 +4,7 @@ import { AuthRouter } from "../modules/auth/auth.route";
 import { AdminRouter } from "../modules/admins/admin.route";
 import { ChatsRouter } from "../modules/chats/chats.router";
 import { CategoryRouter } from "../modules/categories/categories.route";
+import { TransactionRouter } from "../modules/transaction/transaction.route";
 
 const router = Router();
 
@@ -19,6 +20,10 @@ const moduleRoutes = [
     {
         path: '/category',
         route: CategoryRouter,
+    },
+    {
+        path: '/transaction',
+        route: TransactionRouter,
     },
     {
         path: '/admin',
